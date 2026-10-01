@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Tambahan: maximum-scale=1.0 agar UI tidak nge-zoom saat teknisi tap form -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>E-VOUCHER-CEC</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Biar ga ada scrollbar */
+            background-color: #0d1117; /* Warna background gelap biar pas loading ga silau */
+            height: 100dvh; /* MUSTOFA FIX: Kunci tinggi body pakai dinamis (dvh) */
+        }
+        iframe {
+            border: none;
+            width: 100%; /* Lebih aman dari 100vw */
+            height: 100%; /* Mengikuti body yang sudah 100dvh */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ZETTBOT FIX: Tambahan atribut "allow" WAJIB agar fitur GPS & Kamera Visit Only tidak diblokir -->
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbzX-ohk4Qm6yHzsh08-ptV5YPxmtAnKHGQCTXEXJqfb4J8yr81TlJFCxWcz5GhBugF7PA/exec" 
+        allow="camera; geolocation; microphone; clipboard-read; clipboard-write">
+    </iframe>
+
+</body>
+</html>
